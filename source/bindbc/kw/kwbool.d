@@ -1,4 +1,4 @@
-module kw.kwbool;
+module bindbc.kw.kwbool;
 
 alias KW_bool = int;
 enum /*KW_bool*/{
