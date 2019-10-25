@@ -111,9 +111,8 @@ KiwiSupport loadKiwi(const(char)* libName)
     lib.bindSymbol(cast(void**)&KW_SetTextColor, "KW_SetTextColor");
     lib.bindSymbol(cast(void**)&KW_AddGUIFontChangedHandler, "KW_AddGUIFontChangedHandler");
     lib.bindSymbol(cast(void**)&KW_RemoveGUIFontChangedHandler, "KW_RemoveGUIFontChangedHandler");
-    // those below is not implemented in mobius3/KiWi. probably they were forgotten to implement
-    //lib.bindSymbol(cast(void**)&KW_AddGUITextColorChangedHandler, "KW_AddGUITextColorChangedHandler");
-    //lib.bindSymbol(cast(void**)&KW_RemoveGUITextColorChangedHandler, "KW_RemoveGUITextColorChangedHandler");
+    lib.bindSymbol(cast(void**)&KW_AddGUITextColorChangedHandler, "KW_AddGUITextColorChangedHandler");
+    lib.bindSymbol(cast(void**)&KW_RemoveGUITextColorChangedHandler, "KW_RemoveGUITextColorChangedHandler");
     lib.bindSymbol(cast(void**)&KW_GetFont, "KW_GetFont");
     lib.bindSymbol(cast(void**)&KW_GetTextColor, "KW_GetTextColor");
     lib.bindSymbol(cast(void**)&KW_Paint, "KW_Paint");

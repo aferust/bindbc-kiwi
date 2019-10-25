@@ -21,9 +21,8 @@ version(BindKiwi_Static){
         void KW_SetTextColor(KW_GUI * gui, KW_Color color);
         void KW_AddGUIFontChangedHandler(KW_GUI * gui, KW_OnGUIFontChanged handler, void * priv);
         void KW_RemoveGUIFontChangedHandler(KW_GUI * gui, KW_OnGUIFontChanged handler, void * priv);
-        // those below is not implemented in mobius3/KiWi. probably they were forgotten to implement
-        // void KW_AddGUITextColorChangedHandler(KW_GUI*, KW_OnGUITextColorChanged, void*);
-        // void KW_RemoveGUITextColorChangedHandler(KW_GUI * gui, KW_OnGUITextColorChanged handler, void * priv);
+        void KW_AddGUITextColorChangedHandler(KW_GUI*, KW_OnGUITextColorChanged, void*);
+        void KW_RemoveGUITextColorChangedHandler(KW_GUI * gui, KW_OnGUITextColorChanged handler, void * priv);
         KW_Font * KW_GetFont(KW_GUI * gui);
         KW_Color KW_GetTextColor(KW_GUI * gui);
         void KW_Paint(KW_GUI * gui);
@@ -42,9 +41,8 @@ version(BindKiwi_Static){
         alias pKW_SetTextColor = void function(KW_GUI*, KW_Color);
         alias pKW_AddGUIFontChangedHandler = void function(KW_GUI*, KW_OnGUIFontChanged, void*);
         alias pKW_RemoveGUIFontChangedHandler = void function(KW_GUI*, KW_OnGUIFontChanged, void*);
-        // those below is not implemented in mobius3/KiWi. probably they were forgotten to implement
-        // alias pKW_AddGUITextColorChangedHandler = void function(KW_GUI*, KW_OnGUITextColorChanged, void*);
-        // alias pKW_RemoveGUITextColorChangedHandler = void function(KW_GUI*, KW_OnGUITextColorChanged, void*);
+        alias pKW_AddGUITextColorChangedHandler = void function(KW_GUI*, KW_OnGUITextColorChanged, void*);
+        alias pKW_RemoveGUITextColorChangedHandler = void function(KW_GUI*, KW_OnGUITextColorChanged, void*);
         alias pKW_GetFont = KW_Font * function(KW_GUI*);
         alias pKW_GetTextColor = KW_Color function(KW_GUI*);
         alias pKW_Paint = void function(KW_GUI*);
@@ -63,8 +61,8 @@ version(BindKiwi_Static){
         pKW_SetTextColor KW_SetTextColor;
         pKW_AddGUIFontChangedHandler KW_AddGUIFontChangedHandler;
         pKW_RemoveGUIFontChangedHandler KW_RemoveGUIFontChangedHandler;
-        // pKW_AddGUITextColorChangedHandler KW_AddGUITextColorChangedHandler;
-        // pKW_RemoveGUITextColorChangedHandler KW_RemoveGUITextColorChangedHandler;
+        pKW_AddGUITextColorChangedHandler KW_AddGUITextColorChangedHandler;
+        pKW_RemoveGUITextColorChangedHandler KW_RemoveGUITextColorChangedHandler;
         pKW_GetFont KW_GetFont;
         pKW_GetTextColor KW_GetTextColor;
         pKW_Paint KW_Paint;
