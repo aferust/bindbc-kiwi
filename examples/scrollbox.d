@@ -143,12 +143,12 @@ int loadLibs(){
 	SDLImageSupport rsdlim = loadSDLImage();
 	if(rsdlim != sdlImageSupport) {
 		
-		if(ret == SDLSupport.noLibrary) {
+		if(rsdlim == SDLImageSupport.noLibrary) {
 			// SDL shared library failed to load
 			printf("SDL Image shared library failed to load!!! \n");
 			return -1;
 		}
-		else if(SDLSupport.badLibrary) {
+		else if(SDLImageSupport.badLibrary) {
 			// One or more symbols failed to load. The likely cause is that the
 			// shared library is for a lower version than bindbc-sdl was configured
 			// to load (via SDL_201, SDL_202, etc.)
